@@ -334,24 +334,49 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="about-section py-5">
+  <section id="mission" class="mission-section py-5">
     <div class="container">
-      <h2 class="text-center mb-4">About Us</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <div class="mb-4">
-            <img src="images/gallery/falcon logo.jpg" class="img-fluid rounded" alt="About Us" loading="lazy" style="max-width: 200px;">
-          </div>
-          <p class="lead">
-            JNNACM: Where Innovation Takes Flight<br><br>
-            JNNACM is a student-driven organization dedicated to fostering innovation and technical excellence.
-            We organize events, workshops, and hackathons to empower students with the skills they need to succeed
-            in the tech industry.
-          </p>
+        <h2 class="text-center mb-4">Our Mission</h2>
+        <div class="row align-items-center">
+            <!-- Image Column -->
+            <div class="col-12 col-md-5 col-lg-4 order-1 order-md-2 mb-4 mb-md-0">
+                <div class="d-flex justify-content-center">
+                    <img src="images/mission.webp" 
+                         class="img-fluid rounded shadow" 
+                         alt="Our Mission" 
+                         loading="lazy"
+                         style="max-height: 300px; width: auto; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- Text Column -->
+            <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+                <div class="px-3 px-md-4">
+                    <p class="lead mb-4 text-justify"
+                       style="text-align: justify !important; hyphens: auto;">
+                        Our mission is to ignite innovation, empower exploration, and drive excellence in technology.
+                        We bridge the gap between academia and industry by curating dynamic events, groundbreaking workshops,
+                        and transformative experiences that foster creativity, enhance technical expertise, and shape
+                        future leaders in tech.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   </section>
+
+  <style>
+    @media (max-width: 768px) {
+        .mission-section img {
+            max-height: 250px !important;
+            margin-bottom: 1.5rem !important;
+        }
+        .mission-section .lead {
+            font-size: 1rem;
+            padding: 0 15px;
+        }
+    }
+  </style>
 
   <section id="mission" class="mission-section py-5">
     <div class="container">
