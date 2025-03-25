@@ -356,20 +356,29 @@
   <!-- Mission Section -->
   <section id="mission" class="mission-section py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Our Mission</h2>
-      <div class="row align-items-center">
-        <div class="col-md-5 mb-4 mb-md-0">
-          <img src="images/mission.webp" class="img-fluid rounded shadow w-100" alt="Our Mission" loading="lazy">
+        <h2 class="text-center mb-4">Our Mission</h2>
+        <div class="row align-items-center"> <!-- Vertical alignment -->
+            <div class="col-md-6 order-md-2"> <!-- Swapped order -->
+                <div class="px-4 py-3"> <!-- Added padding -->
+                    <p class="lead text-justify mb-4" style="text-align: justify !important;">
+                        Our mission is to ignite innovation, empower exploration, and drive excellence in technology. 
+                        We bridge the gap between academia and industry by curating dynamic events, groundbreaking workshops, 
+                        and transformative experiences that foster creativity, enhance technical expertise, and shape 
+                        future leaders in tech.
+                    </p>
+                    <h4 class="text-center mt-4">FALCON</h4>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1"> <!-- Image column -->
+                <div class="d-flex justify-content-center"> <!-- Center image -->
+                    <img src="images/gallery/falcon inaguration2.jpg" 
+                         class="img-fluid rounded shadow" 
+                         alt="Our Mission" 
+                         loading="lazy"
+                         style="max-height: 400px; object-fit: cover;">
+                </div>
+            </div>
         </div>
-        <div class="col-md-7">
-          <p class="lead">
-            Our mission is to ignite innovation, empower exploration, and drive excellence in technology.
-            We bridge the gap between academia and industry by curating dynamic events, groundbreaking workshops,
-            and transformative experiences that foster creativity, enhance technical expertise, and shape
-            future leaders in tech.
-          </p>
-        </div>
-      </div>
     </div>
   </section>
 
