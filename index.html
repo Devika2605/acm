@@ -357,31 +357,49 @@
   <section id="mission" class="mission-section py-5">
     <div class="container">
         <h2 class="text-center mb-4">Our Mission</h2>
-        <div class="row align-items-center"> <!-- Vertical alignment -->
-            <div class="col-md-6 order-md-2"> <!-- Swapped order -->
-                <div class="px-4 py-3"> <!-- Added padding -->
-                    <p class="lead text-justify mb-4" style="text-align: justify !important;">
+        <div class="row align-items-start"> <!-- Changed to align from top -->
+            <div class="col-md-6 order-md-2 mb-4 mb-md-0"> <!-- Added mobile margin -->
+                <div class="px-md-4 py-3 h-100 d-flex flex-column justify-content-center"> <!-- Added height control -->
+                    <p class="lead text-justify mb-4" style="text-align: justify !important; hyphens: auto;">
                         Our mission is to ignite innovation, empower exploration, and drive excellence in technology. 
                         We bridge the gap between academia and industry by curating dynamic events, groundbreaking workshops, 
                         and transformative experiences that foster creativity, enhance technical expertise, and shape 
                         future leaders in tech.
                     </p>
-                    <h4 class="text-center mt-4">FALCON</h4>
+                    <h4 class="text-center mt-md-4 mt-3">FALCON</h4>
                 </div>
             </div>
-            <div class="col-md-6 order-md-1"> <!-- Image column -->
-                <div class="d-flex justify-content-center"> <!-- Center image -->
+            <div class="col-md-6 order-md-1">
+                <div class="d-flex justify-content-center align-items-center h-100"> <!-- Added height control -->
                     <img src="images/gallery/falcon inaguration2.jpg" 
                          class="img-fluid rounded shadow" 
                          alt="Our Mission" 
                          loading="lazy"
-                         style="max-height: 400px; object-fit: cover;">
+                         style="max-width: 100%; height: auto; object-fit: cover;">
                 </div>
             </div>
         </div>
     </div>
   </section>
 
+  <style>
+    /* Add custom media query for mobile */
+    @media (max-width: 768px) {
+        .mission-section p.lead {
+            text-align: justify !important;
+            font-size: 1rem;
+            padding: 0 15px;
+        }
+        .mission-section img {
+            max-height: 300px !important;
+            margin: 20px 0;
+        }
+        .mission-section .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+  </style>
   <!-- Events Section -->
   <section id="events" class="events-section py-5">
     <div class="container">
