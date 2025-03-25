@@ -4,81 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Throwball</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Custom Styles for 3:7 Ratio and Center Alignment */
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
       color: #fff;
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       min-height: 100vh;
+      padding-bottom: 60px;
     }
-
-    /* Container for 3:7 Ratio */
     .container {
-      width: 60%; /* 70% width for content */
-      max-width: 1200px; /* Limit maximum width */
+      width: 95%;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
       text-align: center;
     }
-
-    /* Image Container */
-    .image-container {
-      display: flex;
-      justify-content: center; /* Center images horizontally */
-      gap: 20px; /* Space between images */
-      margin-bottom: 30px;
-    }
-
-    .image-container img {
-      width: 30%; /* 30% width for each image (3:7 ratio) */
-      height: auto; /* Maintain aspect ratio */
-      border-radius: 15px; /* Rounded corners */
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .image-container img:hover {
-      transform: scale(1.05); /* Zoom effect on hover */
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
-    }
-
-    /* Event Details */
     h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
+      font-size: 2rem;
       font-weight: bold;
       color: #00bcd4;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       margin-bottom: 20px;
     }
-
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .image-grid img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
     p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      background: #00bcd4;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
       font-size: 1rem;
-      border-radius: 25px; /* Rounded button */
-      cursor: pointer;
-      transition: all 0.3s ease;
+      line-height: 1.6;
+      margin-bottom: 20px;
     }
-
-    .btn:hover {
-      background: #0097a7;
-      transform: scale(1.1);
-    }
-
-    /* Footer */
     footer {
       background: rgba(0, 0, 0, 0.8);
       padding: 10px 0;
@@ -87,27 +59,29 @@
       position: fixed;
       bottom: 0;
     }
-
-    footer p {
-      margin: 0;
-      font-size: 0.9rem;
+    @media (min-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      .image-grid { grid-template-columns: repeat(3, 1fr); gap: 15px; }
+      p { font-size: 1.1rem; }
+    }
+    @media (min-width: 992px) {
+      h1 { font-size: 3rem; }
+      .image-grid { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Throwball</h1>
-    <div class="image-container">
-      <img src="images/trowball.jpg" alt="Image 1">
-      <img src="images/throwball2.jpg" alt="Image 2">
-      <img src="images/throwball3.jpg" alt="Image 3">
-      <img src="images/throwball4.jpg" alt="Image 4">
-      <img src="images/throwball5.jpg" alt="Image 5">
+    <div class="image-grid">
+      <img src="images/trowball.jpg" alt="Throwball match">
+      <img src="images/throwball2.jpg" alt="Throwball action">
+      <img src="images/throwball3.jpg" alt="Throwball competition">
+      <img src="images/throwball4.jpg" alt="Throwball team">
+      <img src="images/throwball5.jpg" alt="Throwball finals">
     </div>
-    <p>🎯🔥 What an electrifying *Throw Ball* showdown! 💪🏆 From powerful throws to unstoppable teamwork, every moment was pure passion and sportsmanship! 🚀👏 A huge shoutout to all the players and fans who made this event unforgettable! Until next time—keep aiming high and throwing strong! 💥💫
-    </p>
+    <p>🎯🔥 What an electrifying *Throw Ball* showdown! 💪🏆 From powerful throws to unstoppable teamwork, every moment was pure passion and sportsmanship! 🚀👏 A huge shoutout to all the players and fans who made this event unforgettable! Until next time—keep aiming high and throwing strong! 💥💫</p>
   </div>
-
   <footer>
     <p>&copy; 2025 JNNACM. All rights reserved.</p>
   </footer>
