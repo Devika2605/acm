@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest AI News - JNNACM">
+    <meta name="keywords" content="AI, Artificial Intelligence, AI News, JNNACM">
+    <meta name="author" content="JNNACM Team">
+    <title>AI News - JNNACM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom Styles for AI News Page */
+        .magazines-section,
+        .certificates-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        /* PDF Magazine Grid */
+        .pdf-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pdf-card {
+            width: 280px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .pdf-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            background: rgba(0, 188, 212, 0.2);
+        }
+
+        .pdf-icon {
+            font-size: 3.5rem;
+            color: #00bcd4;
+            margin-bottom: 15px;
+        }
+
+        .pdf-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .pdf-desc {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* Certificate Cards (unchanged) */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-img-top {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            color: #00bcd4;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+        }
+
+        .btn-outline-primary {
+            border-color: #00bcd4;
+            color: #00bcd4;
+        }
+
+        .btn-outline-primary:hover {
+            background: #00bcd4;
+            color: #fff;
+        }
+
+        /* Navigation */
+        .nav-subgroup {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-subgroup .nav-link {
+            color: #fff;
+            margin: 0 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .nav-subgroup .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #00bcd4;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        .nav-subgroup .nav-link:hover {
+            color: #00bcd4;
+        }
+
+        .nav-subgroup .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #00bcd4;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+        }
+
+        /* Existing footer styles - keep these */
+        footer.bg-dark {
+            background: rgba(0, 0, 0, 0.9) !important;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #00bcd4;
+            box-shadow: 0 -5px 15px rgba(0, 188, 212, 0.1);
+        }
+
+
+        /* Dark Mode Compatibility */
+        body.dark-mode .magazines-section,
+        body.dark-mode .certificates-section {
+            background: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="btn btn-dark mode-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent sticky-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand animate_animated animate_fadeInLeft" href="#">JNNACM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown"
+                            href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown"
+                            href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown"
+                            href="team.html">Team</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle animate_animated animate_fadeInDown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="me-2"></i>AI News
+                        </a>
+                        <ul class="dropdown-menu dropdown-cyber">
+                            <li><a class="dropdown-item" href="magazines.html"><i
+                                        class="me-2"></i>Magazines</a></li>
+                            <li><a class="dropdown-item" href="certificates.html"><i
+                                        class=" me-2"></i>Certificates</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown"
+                            href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown"
+                            href="contact.html">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- Magazines Section -->
+        <section id="magazines" class="magazines-section py-5">
+            <div class="container">
+                <h2 class="text-center section-title animate_animated animate_fadeIn">AI Magazines</h2>
+                <div class="pdf-grid">
+                    <a href="images/magazines/magazine1.pdf" class="pdf-card" target="_blank">
+                        <div class="pdf-icon"><i class="fas fa-file-pdf"></i></div>
+                        <h3 class="pdf-title">June Edition-2024</h3>
+                        <p class="pdf-desc">Technology is best when it brings the people together-Matt Mullemveg</p>
+                    </a>
+                    <a href="images/magazines/magazine2.pdf" class="pdf-card" target="_blank">
+                        <div class="pdf-icon"><i class="fas fa-file-pdf"></i></div>
+                        <h3 class="pdf-title">October Edition-2024</h3>
+                        <p class="pdf-desc">The measure of Intelligence is the ability to change- Albert Einstein</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 JNNACM. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/association-for-computing-machinery/"
+                    class="text-white me-3">Linked in</a>
+                <a href="https://www.instagram.com/jnnce.aiml?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    class="text-white">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the team of JNNACM - Guiding students towards innovation and excellence.">
+  <meta name="keywords" content="JNNACM, team, professors, mentors, technology, innovation">
+  <meta name="author" content="JNNACM Team">
+  <meta property="og:title" content="JNNACM team">
+  <meta property="og:description"
+    content="Meet the team of JNNACM - Guiding students towards innovation and excellence.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=JNNACM+team">
+  <title>JNNACM team</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* team Card Styling - Added for perfect alignment */
+    .team-section .card {
+      border: none;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    .team-section .card-img-container {
+      height: 200px;
+      overflow: hidden;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .team-section .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .team-section .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .team-section .card:hover .card-img-top {
+      transform: scale(1.03);
+    }
+
+    .team-section .card-body {
+      padding: 1.25rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .team-section .card-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #0190a3;
+    }
+
+    .team-section .card-text {
+      font-size: 0.9rem;
+      color: #0e111b;
+      margin-bottom: 0;
+    }
+
+    /* Grid Layout */
+    @media (min-width: 1400px) {
+      .team-section .col-xxl-5cards {
+        flex: 0 0 auto;
+        width: 20%;
+      }
+    }
+
+    /* Dark Mode Compatibility - Preserved your original dark mode styles */
+    body.dark-mode .team-section .card {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    body.dark-mode .team-section .card-text {
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <!-- Dark Mode Toggle - Preserved exactly as you had it -->
+  <button id="dark-mode-toggle" class="btn btn-dark mode-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+
+  <!-- Enhanced Navigation Bar - Preserved exactly as you had it -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand animate_animated animate_fadeInLeft" href="#" id="logo">JNNACM</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="team.html">Team</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle animate_animated animate_fadeInDown" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-robot me-2"></i>AI News
+            </a>
+            <ul class="dropdown-menu dropdown-cyber">
+              <li><a class="dropdown-item" href="magazines.html"><i class="fas fa-book me-2"></i>Magazines</a></li>
+              <li><a class="dropdown-item" href="certificates.html"><i
+                    class="fas fa-certificate me-2"></i>Certificates</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="events.html">Events</a>
+          </li>
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="contact.html">Contact
+              Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- team Section - Updated with perfect alignment while preserving content -->
+  <section id="team" class="team-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Faculty Committee</h2>
+      <div class="row g-4">
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow">
+            <div class="card-img-container">
+              <img src="images/faculty/hod.jpg" class="card-img-top" alt="Dr. Chetan K R" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Dr.Chetan K R</h3>
+              <p class="card-text">Prof. and Head, Dept of AIML</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow">
+            <div class="card-img-container">
+              <img src="images/faculty/Dr Ashwini JP.jpg" class="card-img-top" alt="Dr. Ashwini J P" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Dr.Ashwini J P</h3>
+              <p class="card-text">Associate Professor</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow">
+            <div class="card-img-container">
+              <img src="images/faculty/Mr Sayyed Johar.jpg" class="card-img-top" alt="Mr. Sayyed Johar" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Mr.Sayyed Johar</h3>
+              <p class="card-text">Assistant Professor</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow">
+            <div class="card-img-container">
+              <img src="images/faculty/ranjan.jpeg" class="card-img-top" alt="Mr. Ranjan V" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Mr.Ranjan V</h3>
+              <p class="card-text">Assiastant Prof. and team Coordinator</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow">
+            <div class="card-img-container">
+              <img src="images/faculty/shaziya.jpg" class="card-img-top" alt="Mrs. Shaziya Banu S" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Mrs.Shaziya Banu S</h3>
+              <p class="card-text">Assistant Professor</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow">
+            <div class="card-img-container">
+              <img src="" class="card-img-top" alt="Mr. Nishanth S" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Mr.Nishanth S</h3>
+              <p class="card-text">Assistant Professor</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow">
+            <div class="card-img-container">
+              <img src="images/faculty/aaliya.jpg" class="card-img-top" alt="Ms. Aliya Waseem" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Ms.Aliya Waseem</h3>
+              <p class="card-text">Assistant Professor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <hr width="100%" size="20">
+          <h3 class="text-center mb-5 animate_animated animate_fadeIn">Strategic Planning Team</h3>
+          <hr width="100%" size="20">
+          <div class="row">
+          </div>
+        </div>
+        <!-- Team Member 1 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=John+Doe" class="card-img-top" alt="Kushan gowda g h"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Kushan Gowda G H, VI sem </h3>
+              <p class="card-text">President</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/ananya g.jpg" class="card-img-top" alt="ananya g yadagere"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Ananya G Yadagere, VI sem </h3>
+              <p class="card-text">Vice President</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="radiya wasam"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Radiya Wasam, VI sem </h3>
+              <p class="card-text">Secretary</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/mohammed anas.jpg" class="card-img-top" alt="mohammed anas" loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Mohammad Anas, VI sem </h3>
+              <p class="card-text">Secretary</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 5-->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="akash n v"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Akash N V, VI sem </h3>
+              <p class="card-text">Treasurer</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 6 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="alvina noronha"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Alvia Noronha, VI sem </h3>
+              <p class="card-text">Joint Treasurer</p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <hr width="100%" size="20">
+          <h3 class="text-center mb-5 animate_animated animate_fadeIn">Technical Team</h3>
+          <hr width="100%" size="20">
+          <div class="row">
+          </div>
+        </div>
+        <!-- Team Member 7 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/Devika N D.jpg" class="card-img-top" alt="Devika N D" loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Devika N D, IV sem </h3>
+              <p class="card-text">Website Designer</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 8 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/Shreya R Chittaragi.jpg" class="card-img-top" alt="Shreya r chittaragi" loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Shreya R Chittaragi, IV sem </h3>
+              <p class="card-text">Website Designer</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 9 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/komal singh.jpg" class="card-img-top" alt="komal singh" loading="lazy">
+            </div>
+              <div class="card-body text-center">
+              <h3 class="card-title">Komal Singh, VI sem </h3>
+              <p class="card-text">Website Designer</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 10 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="usha m l"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Usha M L, VI sem </h3>
+              <p class="card-text">Social Media</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 11 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/komal.jpg" class="card-img-top" alt="komal"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Komal, IV sem </h3>
+              <p class="card-text">Social Media</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 12 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="manoj s patil"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Manoj S Patil, VI sem </h3>
+              <p class="card-text">Content Management</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 13 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/adithi hs.jpg" class="card-img-top" alt="adithi h s" loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Adithi H S, VI sem </h3>
+              <p class="card-text">Content Management</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 14 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/prajwal r.jpeg" class="card-img-top" alt="prajwal r"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Prajwal R, VI sem </h3>
+              <p class="card-text">Content Management</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 15 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/sunidhi.jpg" class="card-img-top" alt="sunidhi" loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Sunidhi, VI sem </h3>
+              <p class="card-text">Design and Magazine</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 16 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/sahanand.jpg" class="card-img-top" alt="sahana n d" loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Sahana N D, VI sem </h3>
+              <p class="card-text">Design and Magazine</p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <hr width="100%" size="20">
+          <h3 class="text-center mb-5 animate_animated animate_fadeIn">Management Committee</h3>
+          <hr width="100%" size="20">
+          <div class="row">
+          </div>
+        </div>
+        <!-- Team Member 17 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="manjappa gowda"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Manjappa Gowda, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 18 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="harshitha n r"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Harshitha N R, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 19 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/jyothimatad.jpg" class="card-img-top" alt="jyothi matad" loading="lazy">
+            </div>
+              <div class="card-body text-center">
+              <h3 class="card-title">Jyothi Matad, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 20 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/deepikatm.jpg" class="card-img-top" alt="deepika t m"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Deepika T M, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 21 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/sahana sk.jpg" class="card-img-top" alt="sahana s k " loading="lazy">
+          </div>
+              <div class="card-body text-center">
+              <h3 class="card-title">Sahana S K, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 22 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="pritanya m m"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Pritanya M M, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 23 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/kruthi br.jpg" class="card-img-top" alt="kruthi b r" loading="lazy">
+            </div>
+              <div class="card-body text-center">
+              <h3 class="card-title">Kruthi B R, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 24 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="nidhi b a"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Nidhi B A, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 25-->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="harshika n"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Harshika N, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 26 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/tsnu b.jpg" class="card-img-top" alt="tanu b" loading="lazy">
+            </div>
+              <div class="card-body text-center">
+              <h3 class="card-title">Tanu B, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 27 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="neeridhi"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Neeridhi, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 28 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="disha b n"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Disha B N, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 29 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/naveen V kumbaar.jpg" class="card-img-top" alt="naveen v" loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Naveen V Kumbar, IV sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 30 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/yashswini.jpg" class="card-img-top" alt="yashaswini s gowda" loading="lazy">
+            </div>
+              <div class="card-body text-center">
+              <h3 class="card-title">Yashaswini S Gowda, IV sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 31 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/sinchana.jpg" class="card-img-top" alt="sinchana k" loading="lazy">
+            </div>
+              <div class="card-body text-center">
+              <h3 class="card-title">Sinchana K, IV sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 32 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/amruthaks.jpg" class="card-img-top" alt="amrutha k s" loading="lazy">
+            </div>
+              <div class="card-body text-center">
+              <h3 class="card-title">Amrutha K S, IV sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 33 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="anagha c"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Anagha C, IV sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 34 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="suchet h s"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Suchet H S</h3>, IV sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 35 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="vinay raj v"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Vinay Raj V, IV sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 36 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="prajna n kulal"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Prajna N kulal, IV sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 37 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="navami n"
+                loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Navami N, IV sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 38 -->
+        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow ">
+            <div class="card-img-container">
+              <img src="images/team/rajeshwari hm.jpg" class="card-img-top" alt="rajeshwari h m" loading="lazy">
+            </div>
+            <div class="card-body text-center">
+              <h3 class="card-title">Rajeshwari H M, VI sem </h3>
+              <p class="card-text">Member</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer - Preserved exactly as you had it -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 JNNACM. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/association-for-computing-machinery/" class="text-white me-3">Linked
+          in</a>
+        <a href="https://www.instagram.com/jnnce.aiml?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          class="text-white">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS - Preserved exactly as you had it -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS - Preserved exactly as you had it -->
+  <script src="script.js"></script>
+</body>
+
+</html>

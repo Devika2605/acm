@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to JNNACM - Empowering students through technology and innovation.">
+  <meta name="keywords" content="JNNACM, technology, innovation, hackathon, workshops">
+  <meta name="author" content="JNNACM Team">
+  <meta property="og:title" content="JNNACM - Empowering Innovation">
+  <meta property="og:description" content="Welcome to JNNACM - Empowering students through technology and innovation.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=JNNACM+Social+Image">
+  <title>JNNACM - Empowering Innovation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Event Cards */
+    .events-section .card {
+      background: rgba(255, 255, 255, 0.95) !important;
+      color: #000;
+    }
+
+    .events-section .card-text {
+      color: #333 !important;
+    }
+
+    /* Trend Cards */
+    .trends-section .card {
+      background: rgba(199, 204, 205, 0.95) !important;
+      color: #000;
+    }
+
+    .trends-section .card-text {
+      color: #333 !important;
+    }
+
+    /* Maintain blue accents */
+    .events-section .card-title,
+    .trends-section .card-title {
+      color: #2196F3 !important;
+    }
+
+    /* Button adjustments */
+    .events-section .btn-outline-primary,
+    .trends-section .btn-outline-primary {
+      border-color: #2196F3;
+      color: #2196F3;
+    }
+
+    .events-section .btn-outline-primary:hover,
+    .trends-section .btn-outline-primary:hover {
+      background: #2196F3;
+      color: white;
+    }
+
+    .contact-section {
+      padding: 80px 0;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+    }
+
+    .contact-form {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-form h3 {
+      margin-bottom: 20px;
+      color: #2196F3;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .contact-form textarea,
+    .contact-form input,
+    .contact-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      color: inherit;
+      transition: all 0.3s;
+    }
+
+    .contact-form button {
+      background: #2196F3;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #1976D2;
+    }
+
+    /* Dark mode overrides */
+    body.dark-mode .contact-section,
+    body.dark-mode .contact-form {
+      background: rgba(0, 0, 0, 0.1);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode .contact-form input,
+    body.dark-mode .contact-form textarea,
+    body.dark-mode .contact-form select {
+      background: rgba(0, 0, 0, 0.2);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Custom Styles for WOW Effect */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #19192d);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section - Updated for consistent background */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('images/DSC_0028.jpg') no-repeat center center/cover;
+      background-attachment: scroll;
+      padding: 80px 0;
+    }
+
+    body.dark-mode .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('images/DSC_0028.jpg') no-repeat center center/cover;
+    }
+
+    .hero-section h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 4.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: fadeInDown 1.5s ease-in-out;
+    }
+
+    .hero-section p {
+      font-size: 1.8rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .highlight {
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: #00bcd4;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: #0097a7;
+      transform: scale(1.1);
+    }
+
+    .countdown-timer {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .countdown-timer span {
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      margin: 0 5px;
+    }
+
+    .about-section,
+    .events-section,
+    .mission-section,
+    .testimonials-section,
+    .sponsors-section,
+    .team-section,
+    .event-section,
+    .trends-section {
+      padding: 80px 0;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .card {
+      margin: 8px;
+      border-radius: 8px !important;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .card-img-top {
+      height: 150px;
+      /* Reduced image height */
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1rem !important;
+    }
+
+    .card-title {
+      font-size: 1.2rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+
+    .card-text {
+      font-size: 0.9rem !important;
+      margin-bottom: 0.75rem !important;
+    }
+
+    .btn {
+      padding: 0.25rem 0.75rem !important;
+      font-size: 0.85rem !important;
+    }
+
+    /* Grid Adjustments */
+    .team-section .row,
+    .events-section .row {
+      gap: 0.5rem;
+    }
+
+    /* team Cards - 4 per row */
+    @media (min-width: 768px) {
+      .team-section .col-md-3 {
+        flex: 0 0 calc(25% - 1rem);
+        max-width: calc(25% - 1rem);
+      }
+    }
+
+    /* Events Cards - 5 per row */
+    @media (min-width: 992px) {
+      .events-section .col-lg-5col {
+        flex: 0 0 20%;
+        max-width: 20%;
+      }
+    }
+
+    /* Mobile Optimization */
+    @media (max-width: 767px) {
+      .card-img-top {
+        height: 120px;
+      }
+
+      .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+
+    /* Section Padding Reduction */
+    .ai-news-section,
+    .magazines-section,
+    .certificates-section,
+    .team-section,
+    .events-section {
+      padding: 40px 0 !important;
+    }
+
+    /* Compact Navigation */
+    .navbar {
+      padding: 10px 0 !important;
+    }
+
+    .nav-link {
+      font-size: 0.9rem !important;
+      margin: 0 8px !important;
+    }
+    
+    main {
+      flex: 1;
+    }
+
+    footer {
+      margin-top: auto;
+      width: 100%;
+    }
+
+    /* Existing footer styles - keep these */
+    footer.bg-dark {
+      background: rgba(0, 0, 0, 0.9) !important;
+      backdrop-filter: blur(10px);
+      border-top: 1px solid #00bcd4;
+      box-shadow: 0 -5px 15px rgba(0, 188, 212, 0.1);
+    }
+
+    .social-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #00bcd4;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Enhanced Navigation Bar */
+    .navbar {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 15px 0;
+    }
+
+    .navbar-brand {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00bcd4;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand:hover {
+      color: #0097a7;
+    }
+
+    .nav-link {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #fff;
+      margin: 0 10px;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #00bcd4;
+      bottom: -5px;
+      left: 0;
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #00bcd4;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* ACM JNNCE STUDENT CHAPTER Logo */
+    .acm-logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00bcd4;
+      animation: fadeIn 2s ease-in-out;
+      display: flex;
+      align-items: center;
+    }
+
+    .acm-logo img {
+      height: 105px;
+      margin-right: 10px;
+      animation: fadeInLeft 1.5s ease-in-out;
+    }
+
+    .acm-logo span {
+      animation: fadeInRight 1.5s ease-in-out;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <!-- Dark Mode Toggle -->
+  <button id="dark-mode-toggle" class="btn btn-dark mode-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+
+  <!-- Enhanced Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <!-- ACM JNNCE STUDENT CHAPTER Logo -->
+      <a class="navbar-brand animate_animated animate_fadeInLeft acm-logo" href="#">
+        <img src="images/acm new llogo.png" alt="ACM JNNCE Logo">
+        <span>JNNCE STUDENT CHAPTER</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="team.html">Team</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle animate_animated animate_fadeInDown" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-robot me-2"></i>AI News
+            </a>
+            <ul class="dropdown-menu dropdown-cyber">
+              <li><a class="dropdown-item" href="magazines.html"><i class="fas fa-book me-2"></i>Magazines</a></li>
+              <li><a class="dropdown-item" href="certificates.html"><i
+                    class="fas fa-certificate me-2"></i>Certificates</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="events.html">Events</a>
+          </li>
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="contact.html">Contact
+              Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Countdown Timer -->
+  <section id="home" class="hero-section text-center text-white">
+    <div class="container">
+      <img src="images/aiml_logo-removebg-preview.png" alt="AIML JNNCE Logo" class="display-4" style="max-width: 75px;">
+      <h1 class="display-4"> <span class="highlight">JNNACM</span> </h1>
+      <h2>Dept. of AI & ML</h2>
+      <p class="lead">Empowering students through <span class="highlight">technology</span> and <span
+          class="highlight">innovation</span>.</p>
+      <div class="mt-4">
+        <a href="#events" class="btn btn-primary btn-lg">Explore Events</a>
+      </div>
+
+      <!-- Countdown Timer -->
+      <div id="countdown" class="mt-4">
+        <h3>Next Event: _________</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">About Us</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <div class="mb-4">
+            <img src="images/gallery/falcon logo.jpg" class="img-fluid rounded" alt="About Us" loading="lazy"
+              style="max-width: 200px;">
+          </div>
+          <p class="lead">
+            JNNACM: Where Innovation Takes Flight<br><br>
+            JNNACM is a student-driven organization dedicated to fostering innovation and technical excellence.
+            We organize events, workshops, and hackathons to empower students with the skills they need to succeed
+            in the tech industry.
+          </p>
+          <div class="mt-4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission" class="mission-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Mission</h2>
+      <div class="row justify-content-center align-items-center">
+        <!-- Image Column (Left) -->
+        <div class="col-md-5 col-lg-4 order-md-1 mb-4 mb-md-0">
+          <div class="d-flex justify-content-center">
+            <img src="images/mission.webp" class="img-fluid rounded shadow" alt="Our Mission" loading="lazy"
+              style="max-height: 400px; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Text Column (Right) -->
+        <div class="col-md-7 col-lg-6 order-md-2">
+          <div class="px-lg-4">
+            <p class="lead mb-4 text-justify" style="text-align: justify !important;">
+              Our mission is to ignite innovation, empower exploration, and drive excellence in technology.
+              We bridge the gap between academia and industry by curating dynamic events, groundbreaking workshops,
+              and transformative experiences that foster creativity, enhance technical expertise, and shape
+              future leaders in tech.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="events-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Events</h2>
+      <div class="row justify-content-center"> <!-- Added justify-content-center -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"> <!-- Adjusted column sizes -->
+          <div class="card h-100 shadow mx-auto" style="max-width: 300px;"> <!-- Added mx-auto and max-width -->
+            <img src="images/tug.webp" class="card-img-top" alt="Tech Symposium" loading="lazy">
+            <div class="card-body text-center"> <!-- Added text-center -->
+              <h3 class="card-title">Tug Of War</h3>
+              <p class="card-text">Join us for a day of innovation and learning.</p>
+              <a href="tug of thunder.html" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other cards -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="card h-100 shadow mx-auto" style="max-width: 300px;">
+            <img src="images/volleyball.jpg" class="card-img-top" alt="Hackathon 2023" loading="lazy">
+            <div class="card-body text-center">
+              <h3 class="card-title">Volleyball</h3>
+              <p class="card-text">Code, compete, and win exciting prizes.</p>
+              <a href="volleyball.html" class="btn btn-outline-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+          <div class="card h-100 shadow mx-auto" style="max-width: 300px;">
+            <img src="images/trowball.jpg" class="card-img-top" alt="AI Workshop" loading="lazy">
+            <div class="card-body text-center">
+              <h3 class="card-title">Throwball</h3>
+              <p class="card-text">Learn the basics of Artificial Intelligence.</p>
+              <a href="throwball.html" class="btn btn-outline-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- "View All Events" Button -->
+      <div class="text-center mt-4">
+        <a href="events.html" class="btn btn-primary btn-lg">View All Events</a>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 JNNACM. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/association-for-computing-machinery/" class="text-white me-3">Linked
+          in</a>
+        <a href="https://www.instagram.com/jnnce.aiml?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          class="text-white">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
