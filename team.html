@@ -18,8 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* team Card Styling - Added for perfect alignment */
-    /* team Card Styling - Added for perfect alignment */
+    /* Team Card Styling */
     .team-section .card {
       border: none;
       border-radius: 10px;
@@ -30,9 +29,9 @@
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
       margin-bottom: 1.5rem;
-      /* Add spacing between cards */
     }
 
+    /* Mobile view - 2 cards per row */
     @media (max-width: 767px) {
       .team-section .col-sm-6 {
         flex: 0 0 50%;
@@ -45,10 +44,33 @@
       }
     }
 
+    /* Tablet view - 3 cards per row */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .team-section .col-md-6 {
+        flex: 0 0 33.333%;
+        width: 33.333%;
+      }
+    }
+col-xxl-5cards col-lg-3 col-md-6 col-sm-6
+    /* Small desktop view - 4 cards per row */
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .team-section .col-lg-3 {
+        flex: 0 0 25%;
+        width: 25%;
+      }
+    }
+
+    /* Large desktop view - 5 cards per row */
+    @media (min-width: 1200px) {
+      .team-section .col-xxl-5cards {
+        flex: 0 0 20%;
+        width: 20%;
+      }
+    }
+
     .team-section .card-img-container {
       height: 0;
       padding-top: 100%;
-      /* Creates a square container (1:1 ratio) */
       position: relative;
       overflow: hidden;
       border-radius: 10px 10px 0 0;
@@ -65,7 +87,10 @@
     }
 
     .team-section .card:hover {
-      transform
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
     .team-section .card:hover .card-img-top {
       transform: scale(1.03);
     }
@@ -84,26 +109,13 @@
       color: #0190a3;
     }
 
-    .team-section .card-body {
-      min-height: 120px;
-      /* Adjust as needed */
-    }
-
     .team-section .card-text {
       font-size: 0.9rem;
       color: #0e111b;
       margin-bottom: 0;
     }
 
-    /* Grid Layout */
-    @media (min-width: 1400px) {
-      .team-section .col-xxl-5cards {
-        flex: 0 0 auto;
-        width: 20%;
-      }
-    }
-
-    /* Dark Mode Compatibility - Preserved your original dark mode styles */
+    /* Dark Mode Compatibility */
     body.dark-mode .team-section .card {
       background: rgba(0, 0, 0, 0.2);
     }
@@ -111,16 +123,27 @@
     body.dark-mode .team-section .card-text {
       color: #ccc;
     }
+
+    /* Section headers */
+    .team-section h2, .team-section h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #0190a3;
+    }
+    
+    .team-section hr {
+      border-color: #0190a3;
+      opacity: 0.5;
+    }
   </style>
 </head>
 
 <body>
   <div id="particles-js"></div>
 
-  <!-- Dark Mode Toggle - Preserved exactly as you had it -->
+  <!-- Dark Mode Toggle -->
   <button id="dark-mode-toggle" class="btn btn-dark mode-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
 
-  <!-- Enhanced Navigation Bar - Preserved exactly as you had it -->
+  <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent sticky-top" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand animate_animated animate_fadeInLeft" href="#" id="logo">JNNACM</a>
@@ -131,26 +154,24 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="gallery.html">Gallery</a>
-          </li>
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="team.html">Team</a></li>
-          <li><a class="nav-item"><a class="nav-link" href="magazines.html">Magazines</a></li>
-          <li><a class="nav-item"><a class="nav-link" href="certificates.html">Certificate</a></li>
-          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="events.html">Events</a>
-          </li>
-          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="contact.html">Contact
-              Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="magazines.html">Magazines</a></li>
+          <li class="nav-item"><a class="nav-link" href="certificates.html">Certificate</a></li>
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="contact.html">Contact Us</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- team Section - Updated with perfect alignment while preserving content -->
+  <!-- Team Section -->
   <section id="team" class="team-section py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Faculty Committee</h2>
+      <h2 class="text-center mb-4 animate__animated animate__fadeIn">Faculty Committee</h2>
       <div class="row g-4">
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <!-- Faculty Member 1 -->
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow">
             <div class="card-img-container">
               <img src="images/faculty/hod.jpg" class="card-img-top" alt="Dr. Chetan K R" loading="lazy">
@@ -161,7 +182,9 @@
             </div>
           </div>
         </div>
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        
+        <!-- Faculty Member 2 -->
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow">
             <div class="card-img-container">
               <img src="images/faculty/Dr Ashwini JP.jpg" class="card-img-top" alt="Dr. Ashwini J P" loading="lazy">
@@ -172,7 +195,9 @@
             </div>
           </div>
         </div>
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        
+        <!-- Faculty Member 3 -->
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow">
             <div class="card-img-container">
               <img src="images/faculty/Mr Sayyed Johar.jpg" class="card-img-top" alt="Mr. Sayyed Johar" loading="lazy">
@@ -183,18 +208,22 @@
             </div>
           </div>
         </div>
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        
+        <!-- Faculty Member 4 -->
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow">
             <div class="card-img-container">
               <img src="images/faculty/ranjan.jpeg" class="card-img-top" alt="Mr. Ranjan V" loading="lazy">
             </div>
             <div class="card-body">
               <h3 class="card-title">Mr.Ranjan V</h3>
-              <p class="card-text">Assiastant Prof. and team Coordinator</p>
+              <p class="card-text">Assistant Prof. and team Coordinator</p>
             </div>
           </div>
         </div>
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        
+        <!-- Faculty Member 5 -->
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow">
             <div class="card-img-container">
               <img src="images/faculty/shaziya.jpg" class="card-img-top" alt="Mrs. Shaziya Banu S" loading="lazy">
@@ -205,7 +234,9 @@
             </div>
           </div>
         </div>
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        
+        <!-- Faculty Member 6 -->
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow">
             <div class="card-img-container">
               <img src="" class="card-img-top" alt="Mr. Nishanth S" loading="lazy">
@@ -216,7 +247,9 @@
             </div>
           </div>
         </div>
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        
+        <!-- Faculty Member 7 -->
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow">
             <div class="card-img-container">
               <img src="images/faculty/aaliya.jpg" class="card-img-top" alt="Ms. Aliya Waseem" loading="lazy">
@@ -228,6 +261,7 @@
           </div>
         </div>
 
+
         <div class="container">
           <hr width="100%" size="20">
           <h3 class="text-center mb-5 animate_animated animate_fadeIn">Strategic Planning Team</h3>
@@ -236,7 +270,7 @@
           </div>
         </div>
         <!-- Team Member 1 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=John+Doe" class="card-img-top" alt="Kushan gowda g h"
@@ -249,7 +283,7 @@
           </div>
         </div>
         <!-- Team Member 2 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/ananya g.jpg" class="card-img-top" alt="ananya g yadagere" loading="lazy">
@@ -262,7 +296,7 @@
         </div>
 
         <!-- Team Member 3 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="radiya wasam"
@@ -275,7 +309,7 @@
           </div>
         </div>
         <!-- Team Member 4 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/mohammed anas.jpg" class="card-img-top" alt="mohammed anas" loading="lazy">
@@ -287,7 +321,7 @@
           </div>
         </div>
         <!-- Team Member 5-->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="akash n v"
@@ -300,7 +334,7 @@
           </div>
         </div>
         <!-- Team Member 6 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top"
@@ -320,7 +354,7 @@
           </div>
         </div>
         <!-- Team Member 7 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/Devika N D.jpg" class="card-img-top" alt="Devika N D" loading="lazy">
@@ -332,7 +366,7 @@
           </div>
         </div>
         <!-- Team Member 8 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/Shreya R Chittaragi.jpg" class="card-img-top" alt="Shreya r chittaragi"
@@ -345,7 +379,7 @@
           </div>
         </div>
         <!-- Team Member 9 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/komal singh.jpg" class="card-img-top" alt="komal singh" loading="lazy">
@@ -357,7 +391,7 @@
           </div>
         </div>
         <!-- Team Member 10 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="usha m l"
@@ -370,7 +404,7 @@
           </div>
         </div>
         <!-- Team Member 11 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/komal.jpg" class="card-img-top" alt="komal" loading="lazy">
@@ -382,7 +416,7 @@
           </div>
         </div>
         <!-- Team Member 12 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="manoj s patil"
@@ -395,7 +429,7 @@
           </div>
         </div>
         <!-- Team Member 13 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/adithi hs.jpg" class="card-img-top" alt="adithi h s" loading="lazy">
@@ -407,7 +441,7 @@
           </div>
         </div>
         <!-- Team Member 14 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/prajwal r.jpeg" class="card-img-top" alt="prajwal r" loading="lazy">
@@ -419,7 +453,7 @@
           </div>
         </div>
         <!-- Team Member 15 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/sunidhi.jpg" class="card-img-top" alt="sunidhi" loading="lazy">
@@ -431,7 +465,7 @@
           </div>
         </div>
         <!-- Team Member 16 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/sahanand.jpg" class="card-img-top" alt="sahana n d" loading="lazy">
@@ -450,7 +484,7 @@
           </div>
         </div>
         <!-- Team Member 17 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top"
@@ -463,7 +497,7 @@
           </div>
         </div>
         <!-- Team Member 18 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="harshitha n r"
@@ -476,7 +510,7 @@
           </div>
         </div>
         <!-- Team Member 19 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/jyothimatad.jpg" class="card-img-top" alt="jyothi matad" loading="lazy">
@@ -488,7 +522,7 @@
           </div>
         </div>
         <!-- Team Member 20 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/deepikatm.jpg" class="card-img-top" alt="deepika t m" loading="lazy">
@@ -500,7 +534,7 @@
           </div>
         </div>
         <!-- Team Member 21 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/sahana sk.jpg" class="card-img-top" alt="sahana s k " loading="lazy">
@@ -512,7 +546,7 @@
           </div>
         </div>
         <!-- Team Member 22 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="pritanya m m"
@@ -525,7 +559,7 @@
           </div>
         </div>
         <!-- Team Member 23 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/kruthi br.jpg" class="card-img-top" alt="kruthi b r" loading="lazy">
@@ -537,7 +571,7 @@
           </div>
         </div>
         <!-- Team Member 24 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="nidhi b a"
@@ -550,7 +584,7 @@
           </div>
         </div>
         <!-- Team Member 25-->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="harshika n"
@@ -563,7 +597,7 @@
           </div>
         </div>
         <!-- Team Member 26 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/tsnu b.jpg" class="card-img-top" alt="tanu b" loading="lazy">
@@ -575,7 +609,7 @@
           </div>
         </div>
         <!-- Team Member 27 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="neeridhi"
@@ -588,7 +622,7 @@
           </div>
         </div>
         <!-- Team Member 28 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="disha b n"
@@ -601,7 +635,7 @@
           </div>
         </div>
         <!-- Team Member 29 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/naveen V kumbaar.jpg" class="card-img-top" alt="naveen v" loading="lazy">
@@ -613,7 +647,7 @@
           </div>
         </div>
         <!-- Team Member 30 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/yashswini.jpg" class="card-img-top" alt="yashaswini s gowda" loading="lazy">
@@ -625,7 +659,7 @@
           </div>
         </div>
         <!-- Team Member 31 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/sinchana.jpg" class="card-img-top" alt="sinchana k" loading="lazy">
@@ -637,7 +671,7 @@
           </div>
         </div>
         <!-- Team Member 32 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/amruthaks.jpg" class="card-img-top" alt="amrutha k s" loading="lazy">
@@ -649,7 +683,7 @@
           </div>
         </div>
         <!-- Team Member 33 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="anagha c"
@@ -662,7 +696,7 @@
           </div>
         </div>
         <!-- Team Member 34 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="suchet h s"
@@ -675,7 +709,7 @@
           </div>
         </div>
         <!-- Team Member 35 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="vinay raj v"
@@ -688,7 +722,7 @@
           </div>
         </div>
         <!-- Team Member 36 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top"
@@ -701,7 +735,7 @@
           </div>
         </div>
         <!-- Team Member 37 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="navami n"
@@ -714,7 +748,7 @@
           </div>
         </div>
         <!-- Team Member 38 -->
-        <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
+        <div class="col-xxl-5cards col-lg-3 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/rajeshwari hm.jpg" class="card-img-top" alt="rajeshwari h m" loading="lazy">
