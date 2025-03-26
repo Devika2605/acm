@@ -28,15 +28,34 @@
       flex-direction: column;
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
+      margin-bottom: 1.5rem;
+      /* Add spacing between cards */
+    }
+
+    @media (max-width: 767px) {
+      .team-section .col-sm-6 {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 350px;
+        /* Limit card width on mobile */
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     .team-section .card-img-container {
-      height: 200px;
+      height: 0;
+      padding-top: 100%;
+      /* Creates a square container (1:1 ratio) */
+      position: relative;
       overflow: hidden;
       border-radius: 10px 10px 0 0;
     }
 
     .team-section .card-img-top {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -64,6 +83,11 @@
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
       color: #0190a3;
+    }
+
+    .team-section .card-body {
+      min-height: 120px;
+      /* Adjust as needed */
     }
 
     .team-section .card-text {
@@ -112,7 +136,7 @@
           </li>
           <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="team.html">Team</a></li>
           <li><a class="nav-item"><a class="nav-link" href="magazines.html">Magazines</a></li>
-          <li><a class="nav-item" ><a class="nav-link" href="certificates.html">Certificate</a></li>
+          <li><a class="nav-item"><a class="nav-link" href="certificates.html">Certificate</a></li>
           <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="events.html">Events</a>
           </li>
           <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="contact.html">Contact
@@ -229,8 +253,7 @@
         <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
-              <img src="images/team/ananya g.jpg" class="card-img-top" alt="ananya g yadagere"
-                loading="lazy">
+              <img src="images/team/ananya g.jpg" class="card-img-top" alt="ananya g yadagere" loading="lazy">
             </div>
             <div class="card-body text-center">
               <h3 class="card-title">Ananya G Yadagere, VI sem </h3>
@@ -281,8 +304,8 @@
         <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
-              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="alvina noronha"
-                loading="lazy">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top"
+                alt="alvina noronha" loading="lazy">
             </div>
             <div class="card-body text-center">
               <h3 class="card-title">Alvia Noronha, VI sem </h3>
@@ -313,7 +336,8 @@
         <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
-              <img src="images/team/Shreya R Chittaragi.jpg" class="card-img-top" alt="Shreya r chittaragi" loading="lazy">
+              <img src="images/team/Shreya R Chittaragi.jpg" class="card-img-top" alt="Shreya r chittaragi"
+                loading="lazy">
             </div>
             <div class="card-body text-center">
               <h3 class="card-title">Shreya R Chittaragi, IV sem </h3>
@@ -327,7 +351,7 @@
             <div class="card-img-container">
               <img src="images/team/komal singh.jpg" class="card-img-top" alt="komal singh" loading="lazy">
             </div>
-              <div class="card-body text-center">
+            <div class="card-body text-center">
               <h3 class="card-title">Komal Singh, VI sem </h3>
               <p class="card-text">Website Designer</p>
             </div>
@@ -350,8 +374,7 @@
         <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
-              <img src="images/team/komal.jpg" class="card-img-top" alt="komal"
-                loading="lazy">
+              <img src="images/team/komal.jpg" class="card-img-top" alt="komal" loading="lazy">
             </div>
             <div class="card-body text-center">
               <h3 class="card-title">Komal, IV sem </h3>
@@ -388,8 +411,7 @@
         <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
-              <img src="images/team/prajwal r.jpeg" class="card-img-top" alt="prajwal r"
-                loading="lazy">
+              <img src="images/team/prajwal r.jpeg" class="card-img-top" alt="prajwal r" loading="lazy">
             </div>
             <div class="card-body text-center">
               <h3 class="card-title">Prajwal R, VI sem </h3>
@@ -432,8 +454,8 @@
         <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
-              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="manjappa gowda"
-                loading="lazy">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top"
+                alt="manjappa gowda" loading="lazy">
             </div>
             <div class="card-body text-center">
               <h3 class="card-title">Manjappa Gowda, VI sem </h3>
@@ -460,7 +482,7 @@
             <div class="card-img-container">
               <img src="images/team/jyothimatad.jpg" class="card-img-top" alt="jyothi matad" loading="lazy">
             </div>
-              <div class="card-body text-center">
+            <div class="card-body text-center">
               <h3 class="card-title">Jyothi Matad, VI sem </h3>
               <p class="card-text">Member</p>
             </div>
@@ -470,8 +492,7 @@
         <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
-              <img src="images/team/deepikatm.jpg" class="card-img-top" alt="deepika t m"
-                loading="lazy">
+              <img src="images/team/deepikatm.jpg" class="card-img-top" alt="deepika t m" loading="lazy">
             </div>
             <div class="card-body text-center">
               <h3 class="card-title">Deepika T M, VI sem </h3>
@@ -484,8 +505,8 @@
           <div class="card h-100 shadow ">
             <div class="card-img-container">
               <img src="images/team/sahana sk.jpg" class="card-img-top" alt="sahana s k " loading="lazy">
-          </div>
-              <div class="card-body text-center">
+            </div>
+            <div class="card-body text-center">
               <h3 class="card-title">Sahana S K, VI sem </h3>
               <p class="card-text">Member</p>
             </div>
@@ -510,7 +531,7 @@
             <div class="card-img-container">
               <img src="images/team/kruthi br.jpg" class="card-img-top" alt="kruthi b r" loading="lazy">
             </div>
-              <div class="card-body text-center">
+            <div class="card-body text-center">
               <h3 class="card-title">Kruthi B R, VI sem </h3>
               <p class="card-text">Member</p>
             </div>
@@ -548,7 +569,7 @@
             <div class="card-img-container">
               <img src="images/team/tsnu b.jpg" class="card-img-top" alt="tanu b" loading="lazy">
             </div>
-              <div class="card-body text-center">
+            <div class="card-body text-center">
               <h3 class="card-title">Tanu B, VI sem </h3>
               <p class="card-text">Member</p>
             </div>
@@ -598,7 +619,7 @@
             <div class="card-img-container">
               <img src="images/team/yashswini.jpg" class="card-img-top" alt="yashaswini s gowda" loading="lazy">
             </div>
-              <div class="card-body text-center">
+            <div class="card-body text-center">
               <h3 class="card-title">Yashaswini S Gowda, IV sem </h3>
               <p class="card-text">Member</p>
             </div>
@@ -610,7 +631,7 @@
             <div class="card-img-container">
               <img src="images/team/sinchana.jpg" class="card-img-top" alt="sinchana k" loading="lazy">
             </div>
-              <div class="card-body text-center">
+            <div class="card-body text-center">
               <h3 class="card-title">Sinchana K, IV sem </h3>
               <p class="card-text">Member</p>
             </div>
@@ -622,7 +643,7 @@
             <div class="card-img-container">
               <img src="images/team/amruthaks.jpg" class="card-img-top" alt="amrutha k s" loading="lazy">
             </div>
-              <div class="card-body text-center">
+            <div class="card-body text-center">
               <h3 class="card-title">Amrutha K S, IV sem </h3>
               <p class="card-text">Member</p>
             </div>
@@ -649,7 +670,7 @@
                 loading="lazy">
             </div>
             <div class="card-body text-center">
-              <h3 class="card-title">Suchet H S</h3>, IV sem </h3>
+              <h3 class="card-title">Suchet H S, IV sem</h3> <!-- Fixed extra closing tag -->
               <p class="card-text">Member</p>
             </div>
           </div>
@@ -671,8 +692,8 @@
         <div class="col-xxl-5cards col-lg-4 col-md-6 col-sm-6">
           <div class="card h-100 shadow ">
             <div class="card-img-container">
-              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top" alt="prajna n kulal"
-                loading="lazy">
+              <img src="https://via.placeholder.com/300x200?text=Emily+Johnson" class="card-img-top"
+                alt="prajna n kulal" loading="lazy">
             </div>
             <div class="card-body text-center">
               <h3 class="card-title">Prajna N kulal, IV sem </h3>
