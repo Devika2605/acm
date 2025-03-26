@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     /* Team Card Styling */
+    /* Team Card Styling */
     .team-section .card {
       border: none;
       border-radius: 10px;
@@ -31,16 +32,36 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Mobile view - 2 cards per row */
+    /* Mobile view - 2 cards per row with better spacing */
     @media (max-width: 767px) {
       .team-section .col-sm-6 {
-        flex: 0 0 50%;
-        width: 50%;
-        padding: 0 8px;
+        flex: 0 0 48%; /* Slightly less than 50% for spacing */
+        width: 48%;
+        padding: 0 4px;
+        margin-bottom: 12px;
       }
+      
       .team-section .row {
-        margin-left: -8px;
-        margin-right: -8px;
+        margin-left: -4px;
+        margin-right: -4px;
+      }
+      
+      .team-section .card-img-container {
+        padding-top: 120%; /* Slightly taller ratio for mobile */
+      }
+      
+      .team-section .card-title {
+        font-size: 0.95rem; /* Slightly smaller text */
+        margin-bottom: 0.3rem;
+      }
+      
+      .team-section .card-text {
+        font-size: 0.8rem;
+      }
+      
+      .team-section .card-body {
+        padding: 0.8rem;
+        min-height: 90px;
       }
     }
 
@@ -51,7 +72,7 @@
         width: 33.333%;
       }
     }
-col-xxl-5cards col-lg-3 col-md-6 col-sm-6
+
     /* Small desktop view - 4 cards per row */
     @media (min-width: 992px) and (max-width: 1199px) {
       .team-section .col-lg-3 {
@@ -70,7 +91,7 @@ col-xxl-5cards col-lg-3 col-md-6 col-sm-6
 
     .team-section .card-img-container {
       height: 0;
-      padding-top: 100%;
+      padding-top: 100%; /* Square ratio by default */
       position: relative;
       overflow: hidden;
       border-radius: 10px 10px 0 0;
