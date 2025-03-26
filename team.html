@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     /* team Card Styling - Added for perfect alignment */
+    /* team Card Styling - Added for perfect alignment */
     .team-section .card {
       border: none;
       border-radius: 10px;
@@ -34,12 +35,13 @@
 
     @media (max-width: 767px) {
       .team-section .col-sm-6 {
-        flex: 0 0 100%;
-        width: 100%;
-        max-width: 350px;
-        /* Limit card width on mobile */
-        margin-left: auto;
-        margin-right: auto;
+        flex: 0 0 50%;
+        width: 50%;
+        padding: 0 8px;
+      }
+      .team-section .row {
+        margin-left: -8px;
+        margin-right: -8px;
       }
     }
 
@@ -63,10 +65,7 @@
     }
 
     .team-section .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-
+      transform
     .team-section .card:hover .card-img-top {
       transform: scale(1.03);
     }
