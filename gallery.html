@@ -67,10 +67,20 @@
       align-items: center;
     }
 
-    .lightbox img {
+    .lightbox-content {
+      position: relative;
       max-width: 90%;
       max-height: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 90vh;
       border-radius: 10px;
+      animation: fadeIn 0.5s ease;
     }
 
     .lightbox-close {
@@ -80,8 +90,18 @@
       color: #fff;
       font-size: 2rem;
       cursor: pointer;
+      z-index: 1001;
+      transition: transform 0.3s ease;
     }
 
+    .lightbox-close:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
     main {
       flex: 1;
@@ -121,17 +141,8 @@
           <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="gallery.html">Gallery</a>
           </li>
           <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="team.html">Team</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle animate_animated animate_fadeInDown" href="#" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-robot me-2"></i>AI News
-            </a>
-            <ul class="dropdown-menu dropdown-cyber">
-              <li><a class="dropdown-item" href="magazines.html"><i class="fas fa-book me-2"></i>Magazines</a></li>
-              <li><a class="dropdown-item" href="certificates.html"><i
-                    class="fas fa-certificate me-2"></i>Certificates</a></li>
-            </ul>
-          </li>
+          <li><a class="nav-item"><a class="nav-link" href="magazines.html">Magazines</a></li>
+          <li><a class="nav-item" ><a class="nav-link" href="certificates.html">Certificate</a></li>
           <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="events.html">Events</a>
           </li>
           <li class="nav-item"><a class="nav-link animate_animated animate_fadeInDown" href="contact.html">Contact
@@ -226,9 +237,11 @@
     </section>
   </main>
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-img" src="" alt="Lightbox Image">
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
   </div>
 
   <!-- Footer -->
@@ -254,12 +267,31 @@
       const lightboxImg = document.getElementById('lightbox-img');
       lightboxImg.src = imageSrc;
       lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
     }
 
-    function closeLightbox() {
-      const lightbox = document.getElementById('lightbox');
-      lightbox.style.display = 'none';
+    function closeLightbox(event) {
+      // Only close if clicking on the overlay (not the image itself)
+      if (event) {
+        const lightboxContent = document.querySelector('.lightbox-content');
+        if (event.target === lightboxContent || event.target === document.getElementById('lightbox')) {
+          const lightbox = document.getElementById('lightbox');
+          lightbox.style.display = 'none';
+          document.body.style.overflow = ''; // Re-enable scrolling
+        }
+      } else {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'none';
+        document.body.style.overflow = ''; // Re-enable scrolling
+      }
     }
+
+    // Close lightbox when pressing Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+    });
   </script>
   <!-- Custom JS -->
   <script src="script.js"></script>
